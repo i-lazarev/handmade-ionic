@@ -11,7 +11,7 @@ import {
   IonCol,
   IonIcon,
 } from "@ionic/react";
-import { person } from "ionicons/icons";
+import { person, call } from "ionicons/icons";
 
 import "./Home.css";
 import Table1 from "../Images/table1.jpg";
@@ -29,13 +29,35 @@ const Tab1: React.FC = () => {
       <IonContent>
         <IonHeader collapse="condense">
           <IonToolbar>
-            <IonRow >
+            <IonRow>
               <IonCol size="9">
                 <IonTitle size="large">!handmade</IonTitle>
               </IonCol>
               <IonCol size="1">
                 <IonModal isOpen={showModal} cssClass="my-custom-class">
-                  <h1>+373 79787776</h1>
+                  <div
+                    style={{
+                      marginTop: "10%",
+                      color: "black",
+                      display: "flex",
+                     justifyContent:"center",
+                      flexDirection: "column",
+                    }}
+                  >
+                    <IonRow>
+                      <IonCol >
+                        <h1>Vasile Lazarev:</h1>
+                      </IonCol>
+                    </IonRow>
+                    <IonRow>
+                      <IonCol size="1">
+                        <IonIcon  icon={call}/>
+                      </IonCol>
+                      <IonCol size="9">
+                        <h3>+373 79787776</h3>
+                      </IonCol>
+                    </IonRow>
+                  </div>
                   <IonButton onClick={() => setShowModal(false)}>
                     Close
                   </IonButton>
