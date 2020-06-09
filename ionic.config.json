@@ -1,0 +1,7 @@
+{
+  "name": "handmade",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
